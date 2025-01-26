@@ -28,36 +28,37 @@ export function TaskForm() {
   };
 
   return (
-    <div className='max-w-[736px] mx-auto px-4 space-y-16'>
-      <Button
-        variant='ghost'
-        size='icon'
-        onClick={() => router.push('/')}
-        className='hover:bg-transparent'
-      >
-        <ArrowLeft className='w-5 h-5 text-muted-foreground' />
-      </Button>
+    <div className='max-w-[var(--content-max-width)] mx-auto px-4 space-y-[var(--section-spacing)] py-6'>
+      <div></div>
+      <div className='max-w-[736px] mx-auto px-4 space-y-4'>
+        <Button
+          variant='ghost'
+          size='icon'
+          onClick={() => router.push('/')}
+          className='hover:bg-transparent   w-8 h-8'
+        >
+          <ArrowLeft className='text-white scale-150 ' />
+        </Button>
 
-      <div className='space-y-8'>
-        <div className='space-y-3'>
-          <label className='text-sm text-muted-foreground'>Title</label>
+        <div className='space-y-4'>
+          <label className='text-sm text-primary font-bold'>Title</label>
           <Input
-            placeholder='Task title'
+            placeholder='Ex. Brush your teeth'
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className='bg-card border-none text-sm'
+            className='bg-taskCardBackground border-1 border-inputBorder text-sm text-primary-foreground py-6'
           />
         </div>
 
-        <div className='space-y-3'>
-          <label className='text-sm text-muted-foreground'>Color</label>
+        <div className='space-y-3 mb-3'>
+          <label className='text-sm text-primary font-bold'>Color</label>
           <ColorPicker selectedColor={color} onColorSelect={setColor} />
         </div>
 
         <Button
           onClick={handleSubmit}
           disabled={!title.trim() || isSubmitting}
-          className='w-full bg-primary text-primary-foreground font-bold py-6'
+          className=' w-full bg-primary text-primary-foreground font-bold py-6'
         >
           {isSubmitting ? 'Save' : 'Add Task'}
           <span className='w-5 h-5 font-bold flex items-center justify-center'>

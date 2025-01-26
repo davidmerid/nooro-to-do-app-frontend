@@ -12,6 +12,7 @@ body {
     --header-background: 0 0% 5%;
     --task-card-background: 0 0% 15%;
     --task-card-border: 0 0% 20%;
+    --input-border: 0 0% 20%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -47,15 +48,15 @@ body {
     --logo-app: 239 53% 59%;
 
     /* Task Colors */
-    --task-red: 3 81% 100%;
-    --task-orange: 35 100% 100%;
-    --task-yellow: 48 100% 100%;
-    --task-green: 135 74% 78%;
-    --task-blue: 211 100% 100%;
-    --task-indigo: 241 60% 84%;
-    --task-purple: 280 63% 87%;
-    --task-pink: 349 82% 100%;
-    --task-brown: 34 42% 64%;
+    --task-red: 3 100% 59%;
+    --task-orange: 35 100% 50%;
+    --task-yellow: 48 100% 50%;
+    --task-green: 135 59% 49%;
+    --task-blue: 211 100% 50%;
+    --task-indigo: 241 61% 59%;
+    --task-purple: 280 68% 60%;
+    --task-pink: 349 100% 59%;
+    --task-brown: 34 27% 50%;
 
     /* UI Colors */
     --text-muted: 0 0% 50%;

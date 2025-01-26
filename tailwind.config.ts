@@ -1,3 +1,4 @@
+import { TaskCard } from '@/components/tasks/tasks-list/Task-card';
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -14,6 +15,7 @@ export default {
         headerBackground: 'hsl(var(--header-background))',
         taskCardBackground: 'hsl(var(--task-card-background))',
         taskCardBorder: 'hsl(var(--task-card-border))',
+        inputBorder: 'hsl(var(--input-border))',
         foreground: 'hsl(var(--foreground))',
         card: {
           DEFAULT: 'hsl(var(--card))',
@@ -54,11 +56,15 @@ export default {
           '5': 'hsl(var(--chart-5))',
         },
         task: {
-          red: 'hsl(var(--task-red))',
-          blue: 'hsl(var(--task-blue))',
-          green: 'hsl(var(--task-green))',
-          yellow: 'hsl(var(--task-yellow))',
-          purple: 'hsl(var(--task-purple))',
+          taskRed: 'hsl(var(--task-red))',
+          taskOrange: 'hsl(var(--task-orange))',
+          taskYellow: 'hsl(var(--task-yellow))',
+          taskGreen: 'hsl(var(--task-green))',
+          taskBlue: 'hsl(var(--task-blue))',
+          taskIndigo: 'hsl(var(--task-indigo))',
+          taskPurple: 'hsl(var(--task-purple))',
+          taskPink: 'hsl(var(--task-pink))',
+          taskBrown: 'hsl(var(--task-brown))',
         },
       },
       borderRadius: {
