@@ -1,21 +1,21 @@
-// components/task-card.tsx
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react';
 import { type Task } from '@/types';
 
 interface TaskCardProps {
-  task: Task;
-  onToggle: (id: string) => void;
-  onDelete: (id: string) => void;
+  task: Task; // Task data
+  onToggle: (id: string) => void; // Function to toggle task completion
+  onDelete: (id: string) => void; // Function to delete task
 }
 
 export function TaskCard({ task, onToggle, onDelete }: TaskCardProps) {
   return (
     <Card className='bg-taskCardBackground p-4 rounded-lg flex items-center justify-between group text-primary-foreground border-2 border-taskCardBorder'>
       <div className='flex items-center gap-4'>
+        {/* Toggle button for task completion */}
         <button
-          onClick={() => onToggle(task.id)}
+          onClick={() => onToggle(task.id)} // Toggle task completion status
           className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors
                 ${
                   task.completed
@@ -24,6 +24,7 @@ export function TaskCard({ task, onToggle, onDelete }: TaskCardProps) {
                 }`}
         >
           {task.completed && (
+            // Checkmark icon for completed tasks
             <svg
               viewBox='0 0 10 8'
               className='w-2.5 h-2.5 text-primary-foreground'
@@ -40,6 +41,7 @@ export function TaskCard({ task, onToggle, onDelete }: TaskCardProps) {
           )}
         </button>
 
+        {/* Task title with strike-through if completed */}
         <span
           className={`text-sm ${
             task.completed ? 'line-through text-muted-foreground' : ''
@@ -49,10 +51,11 @@ export function TaskCard({ task, onToggle, onDelete }: TaskCardProps) {
         </span>
       </div>
 
+      {/* Button to delete task */}
       <Button
         variant='ghost'
         size='icon'
-        onClick={() => onDelete(task.id)}
+        onClick={() => onDelete(task.id)} // Delete the task on click
         className=' group-hover:visible text-muted-foreground hover:text-destructive hover:bg-transparent'
       >
         <Trash2 className='w-5 h-5' />

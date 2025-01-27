@@ -1,6 +1,7 @@
 import React from 'react';
 import { Rocket } from 'lucide-react';
 
+// Header component for the Todo App
 export function Header() {
   return (
     <header className='w-full bg-headerBackground py-[72px]'>
