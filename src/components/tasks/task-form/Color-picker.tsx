@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+// List of colors for the picker with unique ids and background classes. Values are picked from the tailwind.config.ts file
 const COLORS = [
   { id: 'red', value: 'bg-task-taskRed' },
   { id: 'orange', value: 'bg-task-taskOrange' },
@@ -14,8 +15,8 @@ const COLORS = [
 ] as const;
 
 interface ColorPickerProps {
-  selectedColor: string;
-  onColorSelect: (color: string) => void;
+  selectedColor: string; // Currently selected color id
+  onColorSelect: (color: string) => void; // Callback to handle color selection
 }
 
 export function ColorPicker({
@@ -24,6 +25,7 @@ export function ColorPicker({
 }: ColorPickerProps) {
   return (
     <div className='flex flex-wrap gap-3'>
+      {/* Map over color options to create a button for each */}
       {COLORS.map((color) => (
         <button
           key={color.id}
@@ -35,6 +37,7 @@ export function ColorPicker({
             color.value
           )}
         >
+          {/* Show check icon if the color is selected */}
           {selectedColor === color.id && (
             <Check className='w-5 h-5 text-white' />
           )}
