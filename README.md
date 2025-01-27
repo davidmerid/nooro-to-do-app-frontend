@@ -1,36 +1,174 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Documentation for Todo Frontend Application
 
-## Getting Started
+## Overview
 
-First, run the development server:
+## This application is a **Todo Management System** built with **Next.js**, using modern frontend technologies such as **React Query**, **React Hook Form**, **Radix UI**, and **TailwindCSS**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Structure
+
+```plaintext
+root/
+├── package.json
+├── tailwind.config.ts
+├── .env.local
+├── .env.local.example
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── global.css
+│   ├── components/
+│   │   ├── layout/
+│   │   │   └── Header.tsx
+│   │   ├── tasks/
+│   │   │   ├── task-form/
+│   │   │   │   ├── Color-picker.tsx
+│   │   │   │   └── Index.tsx
+│   │   │   ├── task-list/
+│   │   │   │   ├── Task-card.tsx
+│   │   │   │   ├── Task-counter.tsx
+│   │   │   │   ├── Task-empty.tsx
+│   │   │   │   └── Index.tsx
+│   │   ├── ui/
+│   │   │   ├── alert-dialog.tsx
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── checkbox.tsx
+│   │   │   └── input.tsx
+│   ├── hooks/
+│   │   ├── use-create-task.ts
+│   │   └── use-tasks.ts
+│   ├── lib/
+│   │   ├── baseAPI.ts
+│   │   ├── query-provider.tsx
+│   │   ├── tasksAPI.ts
+│   │   └── utils.ts
+│   ├── types/
+│       └── index.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js](https://nextjs.org/) 15.1.6
+- **Styling**: [TailwindCSS](https://tailwindcss.com/), TailwindCSS Animate
+- **State Management**: [React Query](https://tanstack.com/query) with DevTools
+- **Form Handling**: [React Hook Form](https://react-hook-form.com/)
+- **Validation**: [Zod](https://zod.dev/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Utilities**: clsx, tailwind-merge
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Setup Instructions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Node.js**: v16 or higher
+- **Package Manager**: npm, yarn, or pnpm
 
-## Deploy on Vercel
+### Steps
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the Repository**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   git clone https://github.com/davidmerid/nooro-to-do-app-frontend.git
+   cd todo-frontend
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Configure Environment Variables**
+
+   - Create a `.env.local` file based on `.env.local.example`.
+   - Add necessary environment variables (e.g., API base URL).
+
+4. **Run the Development Server**
+
+   ```bash
+   npm run dev
+   ```
+
+   - Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+5. **Build for Production** (Optional)
+   ```bash
+   npm run build
+   npm start
+   ```
+
+---
+
+## Key Files and Features
+
+### Configuration
+
+- **`package.json`**: Contains dependencies and project scripts.
+- **`tailwind.config.ts`**: Configures TailwindCSS, including theme extensions.
+- **`.env.local`**: Stores environment-specific variables (e.g., API base URL).
+
+### App-Level Files
+
+- **`layout.tsx`**: Root layout for the app.
+- **`page.tsx`**: Home page that dynamically renders tasks or task creation UI.
+- **`global.css`**: Includes global TailwindCSS styles.
+
+### Components
+
+- **`Header.tsx`**: Displays the app's header with branding.
+- **Task Form**:
+  - **`Color-picker.tsx`**: Component for selecting a color for tasks.
+  - **`Index.tsx`**: Main task form to create tasks.
+- **Task List**:
+  - **`Task-card.tsx`**: Displays individual tasks with toggle and delete options.
+  - **`Task-counter.tsx`**: Shows total and completed tasks.
+  - **`Task-empty.tsx`**: Empty state message for when no tasks exist.
+
+### Hooks
+
+- **`use-create-task.ts`**: Custom hook for creating tasks, including validation.
+- **`use-tasks.ts`**: Fetches tasks and provides toggle and delete functionality.
+
+### Utilities
+
+- **`baseAPI.ts`**: Axios instance with default configurations.
+- **`query-provider.tsx`**: React Query provider with default settings and DevTools.
+- **`tasksAPI.ts`**: API methods for interacting with tasks (CRUD operations).
+- **`utils.ts`**: Utility function `cn` to merge and manage class names.
+
+### Types
+
+- **`index.ts`**: Type definitions for tasks and related components.
+
+---
+
+## Scripts
+
+- **`npm run dev`**: Starts the development server.
+- **`npm run build`**: Builds the app for production.
+- **`npm run start`**: Starts the production server.
+- **`npm run lint`**: Runs ESLint to check for code issues.
+
+---
+
+## Environment Variables
+
+Environment variables should be added to the `.env.local` file. An example file (`.env.local.example`) is provided for reference.
+
+- **Example Variable**:
+  ```plaintext
+  NEXT_PUBLIC_API_BASE_URL=https://api.example.com
+  ```
+
+Replace placeholders with actual values for your environment.
+
+---
