@@ -8,7 +8,7 @@ export function EmptyState() {
 
       {/* Message indicating no tasks are present */}
       <p className='text-[hsl(var(--text-muted))] font-bold mb-2'>
-        You don't have any tasks registered yet.
+        You don&apos;t have any tasks registered yet.
       </p>
 
       {/* Suggestion to create tasks */}
