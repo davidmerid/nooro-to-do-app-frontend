@@ -76,15 +76,19 @@ body {
   .dark {
     --background: 0 0% 10%;
     --header-background: 0 0% 5%;
+    --task-card-background: 0 0% 15%;
+    --task-card-border: 0 0% 20%;
+    --input-border: 0 0% 20%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 202 81% 62%;
+    --primary: 202 69% 59%;
     --primary-foreground: 0 0% 95%;
-    --secondary: 239 48% 98%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: 239 92% 75%;
+
+    --secondary-foreground: 0 0% 85%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 50%;
     --accent: 0 0% 96.1%;
@@ -106,19 +110,19 @@ body {
     --button-text: 0 0% 95%;
 
     /* Logo Colors */
-    --logo-todo: 202 65% 87%;
-    --logo-app: 239 54% 81%;
+    --logo-todo: 202 69% 59%;
+    --logo-app: 239 53% 59%;
 
     /* Task Colors */
-    --task-red: 3 81% 100%;
-    --task-orange: 35 100% 100%;
-    --task-yellow: 48 100% 100%;
-    --task-green: 135 74% 78%;
-    --task-blue: 211 100% 100%;
-    --task-indigo: 241 60% 84%;
-    --task-purple: 280 63% 87%;
-    --task-pink: 349 82% 100%;
-    --task-brown: 34 42% 64%;
+    --task-red: 3 100% 59%;
+    --task-orange: 35 100% 50%;
+    --task-yellow: 48 100% 50%;
+    --task-green: 135 59% 49%;
+    --task-blue: 211 100% 50%;
+    --task-indigo: 241 61% 59%;
+    --task-purple: 280 68% 60%;
+    --task-pink: 349 100% 59%;
+    --task-brown: 34 27% 50%;
 
     /* UI Colors */
     --text-muted: 0 0% 50%;
@@ -127,6 +131,12 @@ body {
     /* Spacing and sizing proportions */
     --header-height: 17vh;
     --content-padding: 5rem;
+    --section-spacing: 4rem;
+
+    /* Layout proportions */
+    --header-height: 12rem;
+    --button-overlap: -5.625rem; /* For the button overlap effect */
+    --content-max-width: 46rem;
     --section-spacing: 4rem;
   }
 }
