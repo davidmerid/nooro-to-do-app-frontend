@@ -100,7 +100,7 @@ root/
 
    - Open [http://localhost:3000](http://localhost:3000) to view the app.
 
-5. **Build for Production** (Optional)
+5. **Build for Production**
    ```bash
    npm run build
    npm start
